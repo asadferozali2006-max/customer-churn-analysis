@@ -1,0 +1,23 @@
+### Exploratory Analysis
+
+## Organizing by popularity
+
+df.sort_values(by = 'popularity', ascending = False).head(10)
+
+## Conditional formatting 
+
+moviecon = df[((df['budget'] > 150000000) | (df['revenue'] > 450000000)) & (df['vote_average'] > 7) & (df['vote_count'] > 4500)]
+moviecon
+
+## Calculating profits, which 5 movies generate the most/least
+
+df['profit'] = df['revenue'] - df['budget']
+df.sort_values(by = 'profit', ascending = False).head(5)
+df.sort_values(by = 'profit', ascending = True).head(5)
+
+## Which language movies generate the highest/least profit
+
+avgprofit = df.groupby('language')['profit'].mean().sort_values(ascending=False)
+
+print("Highest 3:", avgprofit.head(3))
+print("Lowest 3:", avgprofit.tail(3))
