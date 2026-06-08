@@ -1,6 +1,6 @@
 📌 Overview
 
-🎞️ This projects performs exploratory data analysis on a large-scale movie dataset using Pandas and Matplotlib. Containing over 730,000 movies released from 1960 to 2023, it involves data cleaning and statistical summaries to evaluate key metrics such as audience ratings and revenue.
+🎞️ This projects performs exploratory data analysis on a large-scale movie dataset using Pandas, Matplotlib and Numpy. Containing over 730,000 movies released from 1960 to 2023, it involves data cleaning and statistical summaries to evaluate key metrics such as audience ratings and revenue.
 
 🔥 This analysis demonstrates how raw and messy data can be translated into organized and meaningful insights through structured data manipulation coupled with visual storytelling 
 
@@ -15,6 +15,7 @@ visualize findings using graphs and charts
 Python,
 pandas,
 matplotlib,
+numpy,
 jupyter Notebook,
 pyCharm
 
