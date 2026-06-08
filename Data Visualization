@@ -1,0 +1,47 @@
+# ==========================================
+# 3. Data Visualization
+# ==========================================
+
+## 10 movies generating the highest profit
+
+top_10_profit = df.sort_values(by = 'profit', ascending = False).head(10)
+top_10_profit = top_10_profit.sort_values(by = 'profit', ascending = True)
+
+plt.figure(figsize=(10, 4))
+plt.barh(top_10_profit['title'], top_10_profit['profit'], color='lightgreen')
+plt.xlabel("Profit")
+plt.ylabel("Movie Titles")
+plt.title("Top 10 Movies by Profit")
+plt.show()
+
+## Do more votes lead to higher vote scores?
+
+movie_vote = df[(df['popularity'] > 35) & (df['revenue'] > 150000000)]
+
+plt.figure(figsize=(10, 6))
+plt.scatter(movie_vote['vote_count'], movie_vote['vote_average'], alpha=0.5, color='blue')
+plt.grid(linestyle='dashed')
+plt.xlabel("Vote Count")
+plt.ylabel("Vote Average")
+plt.title("Scatter Plot of Vote Count vs. Vote Average")
+plt.show()
+
+# According to the scatter plot, more votes usually do lead to more vote scores. This is evident because
+# visually, we can see vote counts 20,000 and up have a vote average of 7 and more whereas vote counts 
+# between 5,000 and 10,000 for example are all over the place.
+
+## Are better ratings linked to higher profits?
+
+reliable_movies = df[(df['vote_count'] > 1000) & (df['budget'] > 0) & (df['revenue'] > 0)]
+
+plt.figure(figsize=(10, 6))
+plt.scatter(reliable_movies['vote_average'], reliable_movies['profit'], alpha=0.5, color='purple')
+plt.grid(linestyle='dashed')
+plt.xlabel("Vote Average")
+plt.ylabel("Profit")
+plt.title("Profit vs. Vote Average for Reliable Movies")
+plt.show()
+
+# It seems as if most movies, regardless of their vote average seem to have the same levels of profit, 
+# however there is a considerable amount of high rated movies that are also high in profit. The lower
+# rated movies seem to yield lower profit, some in the negative zone.
