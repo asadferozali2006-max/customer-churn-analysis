@@ -1,4 +1,8 @@
-### Importing libraries 
+# ==========================================
+# 1. Initial Data Analysis
+# ==========================================
+
+## Importing libraries
 
 import pandas as pd
 import numpy as np
@@ -8,18 +12,16 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv(r'customer_churn.csv') # Download the dataset and paste the file path
 
-df
+df.head()
 
 ## Data cleaning
 
 df.isnull().sum()
 df.dropna(inplace=True)
 
-## Replacing languages in the dataframe with their full name
+## View and formalize unique language codes
 
 df['language'].unique()
-
-
 
 language_map = {
     'en': 'English',
