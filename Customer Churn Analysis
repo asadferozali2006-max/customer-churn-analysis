@@ -1,1 +1,42 @@
+### Importing libraries 
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+## Loading dataset
+
+df = pd.read_csv(r'customer_churn.csv') # Download the dataset and paste the file path
+
+df
+
+## Data cleaning
+
+df.isnull().sum()
+df.dropna(inplace=True)
+
+## Replacing languages in the dataframe with their full name
+
+df['language'].unique()
+
+
+
+language_map = {
+    'en': 'English',
+    'ja': 'Japanese',
+    'fr': 'French',
+    'ko': 'Korean',
+    'it': 'Italian',
+    'es': 'Spanish',
+    'de': 'German',
+    'pt': 'Portuguese',
+    'ru': 'Russian',
+    'zh': 'Chinese'
+}
+
+df['language'] = df['language'].replace(language_map)
+
+df['language'].unique()
+
+
 
