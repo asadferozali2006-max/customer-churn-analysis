@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 
 ## Loading dataset
 
-df = pd.read_csv(r'customer_churn.csv') # Download the dataset and paste the file path
+df = pd.read_csv(r'movies.csv') # Download the dataset and paste the file path
 
 df.head()
 
