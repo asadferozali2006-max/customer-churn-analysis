@@ -26,7 +26,11 @@ statistical summaries of movie features,
 relationship analysis (e.g., budget vs revenue),
 data visualization using line charts, bar charts, and scatter plots
 
-📈 Key Insights
+📈 Key Insights:
 Higher-budget films tend to generate higher revenue, not always consistently,
 popularity and ratings are not always directly correlated with revenue,
 data visualization helps highlight trends that are not obvious from raw data
+
+❗Disclaimer:
+Due to fill size limitations, the full dataset is not included in this repository. 
+Dataset Source: https://www.kaggle.com/datasets/asaniczka/tmdb-movies-dataset-2023-930k-movies?
