@@ -13,11 +13,11 @@ visualize findings using graphs and charts
 
 🛠️ Tools & Technologies:
 Python,
-pandas,
-matplotlib,
-numpy,
-jupyter Notebook,
-pyCharm
+Pandas,
+Matplotlib,
+Numpy,
+Jupyter Notebook,
+PyCharm
 
 📊 Key Analysis Performed:
 Data cleaning and preprocessing,
